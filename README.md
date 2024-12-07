@@ -88,11 +88,11 @@ public class OrderNotificationController {
 
 ### Flow of the Application
 
-1. Admin (Client1) enters an Order ID and clicks a status button (e.g., "Prepared").
+1. **`order.html`** (Client1) enters an Order ID and clicks a status button (e.g., "Prepared").
 2. The **OrderUpdate** object, which contains the `orderId` and `status`, is sent to the WebSocket endpoint (`/app/order/status`).
 3. The **OrderNotificationController** receives the message and processes it.
-4. The controller then broadcasts the updated order status to all subscribers (e.g., Client2).
-5. User (Client2), who is subscribed to `/topic/order`, receives the order update and sees it reflected in real-time on the tracking page.
+4. The controller then broadcasts the updated order status to all subscribers (here **`order-user-client.html`** which is Client2).
+5. **`order-user-client.html`** (Client2), who is subscribed to `/topic/order`, receives the order update and sees it reflected in real-time on the tracking page.
 
 This flow enables the admin to update the order status, and users will immediately see these changes without needing to refresh the page, ensuring a seamless experience.
 
