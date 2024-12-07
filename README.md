@@ -111,4 +111,21 @@ The front-end logic is self-explanatory, focusing on receiving and displaying re
 
 > **Note**: Please go through the HTML files thoroughly to understand the front-end logic. This repository particularly focuses on how the WebSocket configuration and flow work using Spring Boot. The HTML and JS code is self-explanatory.
 
+## How to Run It
+
+To run the project and see the real-time order status update flow in action, follow the steps below:
+
+1. **Start Your Spring Boot Application**:  
+   Run the Spring Boot application from your IDE or through the terminal using the command:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+2. **Open User Page (user.html)**:  
+   Open `src/main/resources/templates/users.html` in one browser tab. This page will display the order tracking.
+
+3. **Open Admin Page (order-user-client.html)**:  
+   Open `src/main/resources/templates/order-user-client.html` in another tab. This page allows the admin to update the order status.
+
+4. **Keep Both Tabs Side-by-Side**:  
+   Position both tabs side-by-side to observe the real-time updates. When the admin changes the order status, it will be instantly reflected on the user's tab.
 
