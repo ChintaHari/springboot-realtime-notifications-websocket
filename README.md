@@ -96,3 +96,19 @@ public class OrderNotificationController {
 
 This flow enables the admin to update the order status, and users will immediately see these changes without needing to refresh the page, ensuring a seamless experience.
 
+## Front-End Flow and Logic
+
+This project demonstrates the real-time order status updates via WebSocket. The front-end is responsible for displaying the order status and dynamically updating the UI without needing to refresh the page.
+
+### Brief Overview:
+
+- **WebSocket Connection**: The front-end connects to the WebSocket server at `/ws` using SockJS and STOMP for real-time communication.
+- **Dynamic UI Update**: Once an order status update is received from the server, the front-end dynamically updates the order status on the page.
+- **Admin Interaction**: The **`order.html`** (Client1) inputs the `Order ID` and selects a status (e.g., "Prepared"). The status update is sent to the server via WebSocket and broadcasted to all connected clients (e.g., **`order-user-client.html`** which is Client2).
+- **Real-Time Status**: **`order-user-client.html`** (Client2) subscribed to `/topic/order` instantly see the status change without page reload.
+
+The front-end logic is self-explanatory, focusing on receiving and displaying real-time updates through WebSocket.
+
+> **Note**: Please go through the HTML files thoroughly to understand the front-end logic. This repository particularly focuses on how the WebSocket configuration and flow work using Spring Boot. The HTML and JS code is self-explanatory.
+
+
