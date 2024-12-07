@@ -129,3 +129,9 @@ To run the project and see the real-time order status update flow in action, fol
 4. **Keep Both Tabs Side-by-Side**:  
    Position both tabs side-by-side to observe the real-time updates. When the admin changes the order status, it will be instantly reflected on the user's tab.
 
+Below is a video demonstrating how I tested the real-time order status flow:
+
+[![Watch the Video](images/user_view_order_tracking.png)](video/order_status_demo.mp4)
+
+
+
